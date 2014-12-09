@@ -1,0 +1,316 @@
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: clojure/lang/RT
+	at nginx.clojure.clj.Constants.<clinit>(Constants.java:26)
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+Caused by: java.lang.ClassNotFoundException: clojure.lang.RT
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 10 more
+2014/12/08 22:52:50 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+2014/12/08 22:52:51 [error] 5340#2796: *2 CreateFile() "D:/workspace/wushiyin/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:52:58 [error] 5340#2796: *2 directory index of "D:/workspace/wushiyin/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:53:12 [error] 5340#2796: *2 CreateFile() "D:/workspace/wushiyin/subtitle-marker/device-on-marker.png" failed (3: The system cannot find the path specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle-marker/device-on-marker.png HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:53:18 [error] 5340#2796: *2 CreateFile() "D:/workspace/wushiyin/subtitle_marker/device-on-marker.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle_marker/device-on-marker.png HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:54:02 [error] 5340#2796: *2 CreateFile() "D:/workspace/wushiyin/subtitle_marker/device--marker-on.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle_marker/device--marker-on.png HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:54:06 [error] 5340#2796: *2 CreateFile() "D:/workspace/wushiyin/subtitle_marker/device--marker-on.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle_marker/device--marker-on.png HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:54:08 [error] 5340#2796: *2 CreateFile() "D:/workspace/wushiyin/subtitle_marker/device--marker-on.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle_marker/device--marker-on.png HTTP/1.1", host: "127.0.0.1:8080"
+2014/12/08 22:54:15 [error] 5340#2796: *6 CreateFile() "D:/workspace/wushiyin/subtitle_marker/device--marker-on.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle_marker/device--marker-on.png HTTP/1.1", host: "localhost:8080"
+2014/12/08 22:54:15 [error] 5340#2796: *6 CreateFile() "D:/workspace/wushiyin/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080"
+2014/12/08 22:54:18 [error] 5340#2796: *6 CreateFile() "D:/workspace/wushiyin/subtitle_marker/device--marker-on.png" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /subtitle_marker/device--marker-on.png HTTP/1.1", host: "localhost:8080"
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:54:35 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:54:37 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:54:39 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:55:07 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:55:12 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.groovy.NginxGroovyHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.ClassNotFoundException: groovy.lang.GroovyClassLoader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at nginx.clojure.groovy.NginxGroovyHandlerFactory.<init>(NginxGroovyHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:55:20 [error] 5340#2796: invalid groovy content handler code :  
+               import nginx.clojure.java.NginxJavaRingHandler;
+               import java.util.Map;
+               public class HelloGroovy implements NginxJavaRingHandler {
+                  public Object[] invoke(Map<String, Object> request){
+                     return [200, //http status 200
+                             ["Content-Type":"text/html"], //headers map
+                             "Hello, Groovy & Nginx!"]; //response body can be string, File or Array/Collection of them
+                  }
+               }
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.groovy.NginxGroovyHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.ClassNotFoundException: groovy.lang.GroovyClassLoader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at nginx.clojure.groovy.NginxGroovyHandlerFactory.<init>(NginxGroovyHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:55:25 [error] 5340#2796: invalid groovy content handler code :  
+               import nginx.clojure.java.NginxJavaRingHandler;
+               import java.util.Map;
+               public class HelloGroovy implements NginxJavaRingHandler {
+                  public Object[] invoke(Map<String, Object> request){
+                     return [200, //http status 200
+                             ["Content-Type":"text/html"], //headers map
+                             "Hello, Groovy & Nginx!"]; //response body can be string, File or Array/Collection of them
+                  }
+               }
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:56:11 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:56:23 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:56:24 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:56:25 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+java.lang.RuntimeException: can not load factory:nginx.clojure.clj.NginxClojureHandlerFactory
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:34)
+	at nginx.clojure.NginxHandlerFactory.fetchHandler(NginxHandlerFactory.java:41)
+	at nginx.clojure.NginxClojureRT.registerCode(NginxClojureRT.java:645)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class nginx.clojure.clj.Constants
+	at nginx.clojure.clj.NginxClojureHandlerFactory.<init>(NginxClojureHandlerFactory.java:19)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at java.lang.Class.newInstance(Class.java:433)
+	at nginx.clojure.NginxHandlerFactory.fetchFactory(NginxHandlerFactory.java:31)
+	... 2 more
+2014/12/08 22:58:03 [error] 5340#2796: invalid clojure content handler code :  
+						(fn[req]
+						  {
+						    :status 200,
+						    :headers {"content-type" "text/plain"},
+						    :body  "Hello Clojure & Nginx!" 
+						    })
+          
+2014/12/09 19:26:34 [notice] 4384#6588: signal process started
+2014/12/09 19:26:34 [alert] 5340#7680: *0 open socket #1100 left in connection 1
+Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" Exception in thread "main" 2014/12/09 19:43:14 [error] 5992#9792: *30 directory index of "D:/workspace/wushiyin/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost:8080"
