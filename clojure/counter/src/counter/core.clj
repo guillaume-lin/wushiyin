@@ -41,9 +41,9 @@
 (defn response
   [req]
   (do
-    (load-download-count "downloadcount.txt")
+    (load-download-count "/tmp/downloadcount.txt")
     (inc-download-count)
-    (save-download-count "downloadcount.txt" download-count) 
+    (save-download-count "/tmp/downloadcount.txt" download-count) 
     (str  download-count)))
 
 ;;;
