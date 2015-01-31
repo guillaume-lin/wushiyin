@@ -1,4 +1,5 @@
 (ns counter.core)
+(use :reload 'counter.test)
 
 ;;;  start server first
 (use '[clojure.tools.nrepl.server :only (start-server stop-server)])
@@ -36,15 +37,15 @@
   [file download-count]
   (spit file download-count))
 
-
 ;;; here is the response
 (defn response
   [req]
+  (or (print-req req)
   (do
     (load-download-count "/tmp/downloadcount.txt")
     (inc-download-count)
     (save-download-count "/tmp/downloadcount.txt" download-count) 
-    (str  download-count)))
+    (str  download-count))))
 
 ;;;
 ;;; here is the main entry point, we should dispatch function call here
